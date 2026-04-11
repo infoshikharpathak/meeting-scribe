@@ -58,11 +58,27 @@ app.py                      # Streamlit UI — 2 tabs: Meeting + Agent Activity
 ## Setup
 
 ```bash
-python -m venv .venv
-source .venv/bin/activate
 pip install -e .
-cp .env.example .env
-# set AGENT_FORGE_URL, OPENAI_API_KEY, and optionally SMTP_* / JIRA_* in .env
+```
+
+Create a `.env` file in the project root:
+
+```env
+AGENT_FORGE_URL=http://localhost:8000
+OPENAI_API_KEY=sk-...          # required for structured MOM extraction
+
+# Optional — email
+SMTP_HOST=smtp.gmail.com
+SMTP_PORT=587
+SMTP_USER=you@gmail.com
+SMTP_PASSWORD=your-app-password
+EMAIL_FROM=you@gmail.com
+
+# Optional — Jira (stub mode if not set)
+JIRA_BASE_URL=https://your-org.atlassian.net
+JIRA_EMAIL=you@example.com
+JIRA_API_TOKEN=your-token
+JIRA_PROJECT_KEY=PROJ
 ```
 
 agent-forge must be running before starting meeting-scribe.
