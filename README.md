@@ -1,5 +1,9 @@
 # meeting-scribe
 
+[![CI](https://github.com/MrPathak21/meeting-scribe/actions/workflows/ci.yml/badge.svg)](https://github.com/MrPathak21/meeting-scribe/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Python 3.11+](https://img.shields.io/badge/python-3.11%2B-blue)](https://www.python.org/)
+
 **AI-powered meeting summarizer built on [agent-forge](../agent-forge).**
 
 Upload a Zoom transcript, get a complete Minutes of Meeting — action items with owners, key decisions, and next steps — auto-emailed to attendees and synced to Jira.
